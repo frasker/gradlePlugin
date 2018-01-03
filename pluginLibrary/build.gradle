@@ -1,0 +1,19 @@
+apply plugin:"groovy"
+
+dependencies{
+    compile gradleApi()
+    compile localGroovy()
+}
+repositories {
+    mavenCentral()
+}
+
+group='com.momo.plugin'
+version='1.0.0'
+uploadArchives {
+    repositories {
+        maven {
+            url uri('../repo')
+        }
+    }
+}
